@@ -28,7 +28,7 @@
 
 Результат виконання ДЗ - GitHub репозиторій з двома класами:
 
-- TimeServlet
-- TimezoneValidateFilter
+- `TimeServlet`
+- `TimezoneValidateFilter`
 
 Можуть бути також створені додаткові класи при потребі.
