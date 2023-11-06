@@ -21,7 +21,7 @@
 
 Для цього створи веб-фільтр з назвою `TimezoneValidateFilter`, який має перехвачувати запит `/time`, перевіряти наявність параметру `timezone`, і валідувати його.
 
-Для валідації часового поясу можна використати клас `Timezone`. [Javadoc](https://docs.oracle.com/javase/7/docs/api/java/util/TimeZone.html)
+Для валідації часового поясу можна використати клас `Timezone`, [Javadoc].(https://docs.oracle.com/javase/7/docs/api/java/util/TimeZone.html)
 
 ## Завдання №4 - залий код проєкту на Github
 Створи новий репозиторій на GitHub. Додай туди всі необхідні файли твого проєкту. Переконайсь, що в репозиторії немає зайвих файлів.
@@ -30,4 +30,5 @@
 
 - TimeServlet
 - TimezoneValidateFilter
+
 Можуть бути також створені додаткові класи при потребі.
