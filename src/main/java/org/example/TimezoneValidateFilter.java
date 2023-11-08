@@ -16,19 +16,15 @@ public class TimezoneValidateFilter extends HttpFilter {
     @Override
     public void doFilter(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws IOException, ServletException {
-        try {
-            String timezoneParam = request.getParameter("timezone");
+        String timezoneParam = request.getParameter("timezone");
 
-            if (!isValidTimezone(timezoneParam)) {
-                response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
-                response.getWriter().println("Invalid timezone");
-                response.getWriter().println("Please write zone in valid format");
-                response.getWriter().close();
-            } else {
-                chain.doFilter(request, response);
-            }
-        } catch (NullPointerException e) {
+        if (timezoneParam == null || isValidTimezone(timezoneParam)) {
             chain.doFilter(request, response);
+        } else {
+            response.setStatus(HttpServletResponse.SC_BAD_REQUEST);
+            response.getWriter().println("Invalid timezone");
+            response.getWriter().println("Please write zone in valid format");
+            response.getWriter().close();
         }
     }
 
